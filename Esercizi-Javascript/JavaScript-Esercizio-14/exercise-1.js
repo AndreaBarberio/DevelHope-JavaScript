@@ -1,5 +1,9 @@
 function greet(greeting) {
-  // ...
+    let greetHim;
+    return function greetPerson (person){
+        greetHim = `${greeting} ${person}`;
+        return greetHim;
+    }
 }
 
 const greetWithHello = greet('Hello');

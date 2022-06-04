@@ -12,19 +12,20 @@ const otherSalary = calculateSalary('base');
 
 function calculateSalary(role) {
   if (role === `ceo`) {
-    return `lo stipendio del ` + role + ` è di ` + 2200 + ` euro`;
-  }
-  if (role === `manager` || role === `cto`) {
-    return `lo stipendio del ` + role + ` è di` + 1800 + ` euro`;
-  }
-  if (role === `developer`) {
-    return `lo stipendio del ` + role +`è di `+ 1500 + ` euro`;
-  }
-  else {
-    return `lo stipendio base è di ` + 1000 + ` euro`;
+    return `lo stipendio del ${role} è di 2200 euro`;
   }
 
+  if (role === `manager` || role === `cto`) {
+    return `lo stipendio del ${role} è di 1800 euro`;
+  }
+  if (role === `developer`) {
+    return `lo stipendio del ${role} è di 1500 euro`;
+  }
+  else {
+    return `lo stipendio base è di 1000 euro` ;
+  }
 }
+
 console.log(ceoSalary);
 console.log(managerSalary);
 console.log(ctoSalary);
