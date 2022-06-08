@@ -1,7 +1,16 @@
 function memoize(fn) {
   let cache = {};
   return (y) => {
+  if(y in cache){
     
+    return cache[y];
+  }
+   else {
+     
+     let result = fn(y);
+     cache[y] = result; 
+     return result; 
+   }
 }
 }
 
@@ -17,7 +26,9 @@ function factorial(x) {
 factorial = memoize(factorial);
 console.log(factorial(10));
 console.log(factorial(6));
-console.log(factorial(5));
+console.log(factorial(1));
+
+
 
 /*
 # Closure - Exercise 5
