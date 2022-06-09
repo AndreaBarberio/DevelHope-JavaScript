@@ -1,9 +1,13 @@
 function nicknameMap(persons) {
-  const nicknameList = [];
-  for (let i=0; i < persons.length; i++) {
-    nicknameList[i] = `${persons[i].name}-${persons[i].age}`;
-  }
-  return nicknameList;
+//  return persons.map(
+//    function (element){
+//     return {Nickname: `${element.name}-${element.age}`}
+//    }
+//    );
+// ho lasciato la forma estesa per poter fare passaggio per passaggio la arrow function,
+// la lascio per mostrare la forma non contratta con arrow function
+
+   return persons.map(element => `Nickname: ${element.name}-${element.age}`) 
 }
 
 const persons = [
