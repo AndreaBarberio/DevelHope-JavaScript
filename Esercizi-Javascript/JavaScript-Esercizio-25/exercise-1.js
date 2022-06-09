@@ -1,28 +1,35 @@
 const person = {
+
+  _firstName: "",
+  _lastName: "",
   get firstName() {
     return this._firstName;
   },
 
-  set firstName(nome) {
-    this._firstName = nome;
+  set xFirstName(name) {
+    this._firstName = name;
   },
-
-  get lastName() {
+   get lastName() {
     return this._lastName;
   },
+  set xLastName(surname) {
+    this._lastName = surname;
+  },
 
-  set lastName(cognome) {
-    this._lastName = cognome;
+  fullName() {
+    return `${this._firstName} ${this._lastName}`;
   }
-
 }
 
+const john = Object.create(person);
+john.xFirstName = `John`;
+john.xLastName = `Doe`;
+const simon = Object.create(person);
+simon.xFirstName = `Simon`;
+simon.xLastName = `Collins`;
 
-person.firstName = 'paolo';
-person.lastName = 'Bargiggia';
-console.log(`${person.firstName}, ${person.lastName}`);
-// console.log(john.fullName()); // John Doe
-// console.log(simon.fullName()); // Simon Collins
+console.log(john.fullName()); // John Doe
+console.log(simon.fullName()); // Simon Collins
 
 // # Object Constructor - Exercise 1
 // Creare l'oggetto `person` e definire al suo interno i metodi getters / setters per le proprietà: `firstName` e `lastName`.

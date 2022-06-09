@@ -1,15 +1,11 @@
-function calculateAverageAge(persons) {
-  let sum = 0;
-  
-  // while (i < persons.length) {
-  //   sum = sum + persons[i++].age;
-  // }
-  // return sum / persons.length;
-
-  persons.forEach (element => {
-    sum = sum + element.age;
-  })
-  return sum / persons.length;
+function adultFilter(persons) {
+  const maggiorenni = [];
+  for (let i = 0; i < persons.length; i++) {
+   if (persons[i].age >= 18) {
+     maggiorenni.push(`${persons[i].name} is ${persons[i].age} years old, so can be here.`);
+   }
+  }
+  return maggiorenni;
 }
 
 const persons = [
@@ -25,6 +21,6 @@ const persons = [
   { name: 'Alice', age: 28 }
 ];
 
-const averageAge = calculateAverageAge(persons);
+const adults = adultFilter(persons);
 console.log(persons);
-console.log(averageAge);
+console.log(adults);
