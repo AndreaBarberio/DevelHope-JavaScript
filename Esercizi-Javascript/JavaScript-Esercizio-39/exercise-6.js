@@ -18,8 +18,16 @@ class Circle {
 }
 
 class AreaCalculator {
-  static calculate(shape){
-
+  static calculate(shape) {
+    if (shape.side) {
+      return shape.side * shape.side;
+    }
+    if (shape.radius) {
+      return Math.PI * shape.radius **2;
+    }
+    if (shape.width || shape.height) {
+      return shape.width * shape.height;
+    }
   }
 }
 

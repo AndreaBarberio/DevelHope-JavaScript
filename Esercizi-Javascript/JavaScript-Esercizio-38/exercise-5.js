@@ -7,6 +7,9 @@ class BankAccount {
 
   deposit(amount) {
     this.#amount += amount;
+    if (amount < 0){
+      throw ` `
+    }
   }
 
   withdraw(amount) {
@@ -17,28 +20,20 @@ class BankAccount {
     console.log(this.#amount);
   }
 }
-
 class BankAccountVip extends BankAccount {
-  
-constructor(initialAmount){
-  super(initialAmount)
-    
-  }
 
-
-deposit(amount){
-  if (amount >= 1000){
-    super.deposit(amount + ((amount / 100) * 3))
+  constructor(initialAmount) {
+    super(initialAmount)
   }
-  else {
-    super.deposit(amount)
+  deposit(amount) {
+    if (amount >= 1000) {
+      super.deposit(amount + ((amount / 100) * 3))
+    }
+    else {
+      super.deposit(amount)
+    }
   }
 }
-
-
-
-}
-
 
 const bankAccountVip = new BankAccountVip(1000);
 bankAccountVip.deposit(500);
