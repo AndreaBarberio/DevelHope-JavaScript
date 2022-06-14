@@ -1,5 +1,4 @@
 class Person {
-  // ...
 }
 
 const person = new Person('Mario', 'Rossi', 25);

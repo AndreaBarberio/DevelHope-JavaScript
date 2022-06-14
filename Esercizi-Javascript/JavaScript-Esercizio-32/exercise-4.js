@@ -1,24 +1,13 @@
 function uncompletedNotes(notes) {
-  let uncompletedNotes = [];
-  notes.filter(
-    function (element) {
-      element.todos.filter(
-        function (nestedElement) {
-          if (!nestedElement.done) {
-            uncompletedNotes.push(JSON.parse(JSON.stringify(element)))
-          }
-        }
-      )
-    }
-  )
+  return notes.filter(note => note.todos.some(todo => !todo.done))
+}
 
-  return uncompletedNotes;
-  /*
+/*
 Array Methods - Exercise 4
 Implementare la funzione `uncompletedNotes` che, dato un array di note, restituisce soltanto le note non completate.
 Una nota viene considerata completata se **tutti** i todo presenti hanno il flag `done` impostato a `true`.
 */
-}
+
 
 const notes = [
   {

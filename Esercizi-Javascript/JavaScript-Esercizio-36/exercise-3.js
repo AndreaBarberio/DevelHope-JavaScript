@@ -15,9 +15,6 @@ const obj = {
   lastName: 'Rossi'
 };
 
-
-
-
 const person = Person.fromObject(obj);
 console.log(`${person.firstName} ${person.lastName}`);
 

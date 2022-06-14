@@ -18,8 +18,11 @@ class Circle {
 }
 
 class AreaCalculator {
-  // ...
+  static calculate(shape){
+
+  }
 }
+
 
 const square = new Square(4);
 const rectangle = new Rectangle(4, 2);
