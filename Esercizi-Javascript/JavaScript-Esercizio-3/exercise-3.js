@@ -18,6 +18,11 @@ function addStudent() {
 
      non ho trovato negli argomenti di studio un risposta precisa a questa domanda 
 
+     "ok il codice. Il motivo per cui ti è possibile aggiungere un elemento all'array, anche se questo è stato
+      definito come const, è il fatto che una variabile readonly in javascript non può variare il suo contenuto
+       attraverso una riassegnazione o ridichiarazione. Nel caso di array o oggetti ti sarà comunque possibile
+        aggiungere/rimuovere/modificare elementi/proprietà senza riassegnare o ridichiarare. documentazione ufficiale 
+        (primo paragrafo): https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const "
      */
 }
 

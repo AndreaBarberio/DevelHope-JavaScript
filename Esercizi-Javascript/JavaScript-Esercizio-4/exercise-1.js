@@ -3,11 +3,7 @@
 // cto => 1800
 // developer => 1500
 // default => 1000
-const ceoSalary = calculateSalary('ceo');
-const managerSalary = calculateSalary('manager');
-const ctoSalary = calculateSalary('cto');
-const developerSalary = calculateSalary('developer');
-const otherSalary = calculateSalary('base');
+
 
 
 function calculateSalary(role) {
@@ -25,7 +21,11 @@ function calculateSalary(role) {
     return `lo stipendio base è di 1000 euro` ;
   }
 }
-
+const ceoSalary = calculateSalary('ceo');
+const managerSalary = calculateSalary('manager');
+const ctoSalary = calculateSalary('cto');
+const developerSalary = calculateSalary('developer');
+const otherSalary = calculateSalary('base');
 console.log(ceoSalary);
 console.log(managerSalary);
 console.log(ctoSalary);

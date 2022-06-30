@@ -1,6 +1,6 @@
 function createStore() {
     let store = [] //creo array vuoto
-    const addProduct = (products) => { //costante per i prodotti da aggiungere, che è la arrow function 
+    const addProduct = products => { //costante per i prodotti da aggiungere, che è la arrow function 
         const checkProduct = store.find(check => { // check, tramite find() controlla che gli id nello store combacino col prod
             if (check.id == products.id) { // se la condizione è soddisfatta, product assume la forma dell'argomento passato in fondo 
                 return check; // e me lo ritorna

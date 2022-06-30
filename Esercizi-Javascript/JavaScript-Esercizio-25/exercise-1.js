@@ -28,6 +28,9 @@ const simon = Object.create(person);
 simon.xFirstName = `Simon`;
 simon.xLastName = `Collins`;
 
+/* 
+Il metodo Object.create() crea un nuovo oggetto, utilizzando un oggetto esistente come prototipo dell'oggetto creato
+*/
 console.log(john.fullName()); // John Doe
 console.log(simon.fullName()); // Simon Collins
 

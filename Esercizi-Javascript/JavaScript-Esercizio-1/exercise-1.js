@@ -1,8 +1,10 @@
-function canPlay() {
-  if (true) {
 let personName = 'Paul';
- personName += ` plays football`; // Argh! personName is not defined
-  console.log(`${personName} `);
+function canPlay(surname) {
+  if (true) {
+
+    
+    personName += `${surname} plays football`; // Argh! personName is not defined
   }
 }
-canPlay();
+canPlay(` Johnson`);
+console.log(`${personName} `);

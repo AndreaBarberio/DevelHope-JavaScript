@@ -9,7 +9,10 @@ const person1 = {
 // senza che venga modificato anche il valore "firstName" di person1
 const person2 = Object.assign({}, person1);//ho creato un riferimento all' oggetto(person1) 
 
-
+// nel caso precedente il nome veniva modificato in quanto ciò che stavamo eseguendo era una copia diretta,
+// di conseguenza riassegnando i valori, lo stavamo facendo anche con il padre massimo,
+// invece necessitiamo di un riferimento, possibile da creare attraverso il metodo object.assign() e le prime graffe 
+// a cui assegnare il riferimento ai valori di person 1, ponendo tale riferimento dopo la virgola
 person2.firstName = 'Simon';
 
 console.log(person1);

@@ -4,7 +4,7 @@ const person = {
   age: 25
 }
 let arr = Object.values(person);
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i > arr.length; i++) {
 console.log(Object.values(person)[i]);
 }
 
