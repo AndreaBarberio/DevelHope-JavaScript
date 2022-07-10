@@ -25,7 +25,7 @@
 
   async function savePost() {
     let post = await fetchPost();
-localStorage.setItem('post', JSON.stringify(post))
+    localStorage.setItem('post', JSON.stringify(post))
   }
 </script>
 <!-- fetch fa una chiamata http a un link e restituisce la risposta del server -->

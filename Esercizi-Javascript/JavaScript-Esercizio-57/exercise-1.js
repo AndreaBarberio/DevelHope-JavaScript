@@ -33,9 +33,12 @@ resolve e reject, quando è risolta e quando no
 function fetchPersonById(id) {
   //impostiamo una nuova promise passando come parametro il resolve
   return new Promise(resolve => {
-    if (id < persons.length + 1) {
-      resolve(console.log(persons[id - 1]))
+    for (let i = 0; i < persons.length; i++) {
+      if (persons.id === id) {
+        return resolve(console.log(persons.length[i]));
+      }
     }
   })
 }
-fetchPersonById(1);
+
+Promise.all(console.log(fetchPersonById(2)));

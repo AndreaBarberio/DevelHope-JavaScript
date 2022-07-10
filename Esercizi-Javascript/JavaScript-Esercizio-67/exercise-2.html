@@ -1,9 +1,46 @@
 <html>
-  <body>
-    <div id="container" style="display: flex; align-items: center;"></div>
-  </body>
+
+<body>
+  <div id="container" style="display: flex; align-items: center;"></div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  /*# Network Requests - Exercise 2
+Implementare il codice necessario per recuperare tramite una richiesta HTTP il todo 
+con id 4 tramite il seguente url: https://jsonplaceholder.typicode.com/todos/4. 
+Successivamente creare due elementi:
+* Un elemento `<h2>` contenente il titolo del todo (proprietà `title`)
+* Un elemento `<input type="checkbox">` con la proprietà `checked` impostata 
+al valore presente per la proprietà `completed` del todo
+
+Appendere all'interno del container i due elementi precedentemente creati.*/
+
+
+  async function findId(x) {
+    let response = await fetch(`https://jsonplaceholder.typicode.com/todos`)
+    let todo = await response.json()
+    return todo.find(element => element.id === x)
+
+  }
+
+  async function createCheckbox(y) {
+    let userId = await findId(y);
+    let $createH2 = document.createElement('h2');
+    let $createCheckbox = document.createElement('input');
+    $createCheckbox.type = 'checkbox';
+    if (userId.completed) {
+      $createCheckbox.checked = true;
+    }
+    $createH2.textContent = userId.title;
+    
+    document.getElementById(`container`).appendChild($createH2)
+    document.getElementById(`container`).appendChild($createCheckbox)
+
+  }
+createCheckbox(4);
+createCheckbox(3);
+createCheckbox(44);
+createCheckbox(45);
 </script>
