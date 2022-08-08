@@ -4,6 +4,8 @@ const person = {
   lastName: 'Rossi',
   age: 25
 };
- for (let item of Object.entries(person)) {
-   console.log(`${item[0]}: ${item[1]}`);
- }
+
+
+const {id, firstName, lastName, age} = person;
+
+console.log(` '''\n id: ${id},\n firstName: ${firstName},\n lastName: ${lastName},\n age: ${age}\n\n '''`);

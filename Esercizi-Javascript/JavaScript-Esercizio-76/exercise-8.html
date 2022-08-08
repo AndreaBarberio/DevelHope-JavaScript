@@ -14,5 +14,9 @@
 </html>
 
 <script>
-  // code here
+  const elementList = document.querySelectorAll('.hero-list-item');
+  elementList.forEach(item => {
+    item.addEventListener('mouseenter', () => item.style.backgroundColor = 'red');
+    item.addEventListener('mouseleave', () => item.style.backgroundColor = 'transparent');
+  })
 </script>

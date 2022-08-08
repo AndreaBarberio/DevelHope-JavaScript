@@ -10,7 +10,7 @@
 </html>
 
 <script>
-  function generateLabel(textContent) {
+    function generateLabel(textContent) {
     const label = document.createElement("label");
     label.textContent = textContent;
     return label;
@@ -69,7 +69,12 @@
     form.prepend(firstNameInput);
 
     form.addEventListener("submit", submitPersonForm);
+
+    dispatchEvent(loadedData);
   }
+
+  const loadedData = new Event('personFormLoaded', submitPersonForm);
+  window.addEventListener('personFormLoaded', () => console.log('Person Form is loaded'));
 
   window.addEventListener("DOMContentLoaded", initForm);
 </script>

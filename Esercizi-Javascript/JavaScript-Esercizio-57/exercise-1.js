@@ -24,21 +24,16 @@ const persons = [
 ];
 
 /*
-chiedendo un return di una nuova promise, che accettano due parametri: 
-resolve e reject, quando è risolta e quando no
+
 
 
 
 */
 function fetchPersonById(id) {
-  //impostiamo una nuova promise passando come parametro il resolve
-  return new Promise(resolve => {
-    for (let i = 0; i < persons.length; i++) {
-      if (persons.id === id) {
-        return resolve(console.log(persons.length[i]));
-      }
-    }
-  })
-}
+  //per far si che non avvengano errori uso il ternary operator combinato al metodo find 
+  return new Promise(function(resolve,reject){
+    persons.find((item) => item.id === id) ? resolve(persons.find((item) => item.id === id)) : reject(new Error(`Person id: ${id} not found\n`))
+  });
+ }
 
 Promise.all(console.log(fetchPersonById(2)));
